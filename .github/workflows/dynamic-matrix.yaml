@@ -20,7 +20,7 @@ jobs:
         id: step-2
       - run: |
           echo '${{ steps.step-1.outputs.step-output }}'
-          echo '${{ steps.step-2.outputs.step-update }}'
+          echo '${{ steps.step-2.outputs.step-output }}'
   node-matrix:  
     strategy:
       matrix:
