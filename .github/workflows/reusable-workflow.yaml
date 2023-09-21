@@ -7,6 +7,12 @@ on:
         value: ${{ jobs.generate-output.outputs.date }}
 
 jobs:
+  nested-workflow-call:
+    uses: jwilkicki/workflows/.github/workflows/reusable.yaml@main
+    with:
+      name: "Joe Nested"
+    secrets:
+      access-token: ${{ secrets.ACCESS_TOKEN }}
   generate-output:
     runs-on: ubuntu-latest
     outputs:
@@ -14,3 +20,4 @@ jobs:
     steps:
       - run: echo "date=$(date)" >> $GITHUB_OUTPUT
         id: date-step
+  
