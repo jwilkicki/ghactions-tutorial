@@ -1,0 +1,14 @@
+name: Concurrency 2
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment"
+        type: environment
+        required: true
+
+jobs:
+  sleep:
+    runs-on: ${{ vars.JOBS_RUNNER }}
+    steps:
+      - run: sleep 30
