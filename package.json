@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jwilkicki/ghactions-tutorial#readme",
   "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^5.1.1",
     "axios": "^1.5.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4"
